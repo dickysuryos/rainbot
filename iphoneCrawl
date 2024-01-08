@@ -1,0 +1,20 @@
+from selenium import webdriver
+
+from time import sleep
+
+desired_cap = {
+    "browserName": "safari",
+    "browserVersion": "14.1.1", # iOS version
+    "platformName": "iOS",
+    "safari:deviceType": "iPhone",
+    "safari:deviceName": "Shawn’s iPhone", # device name
+    "safari:deviceUDID": "<UDID>" # UDID from previous step 
+}
+
+driver = webdriver.Safari(desired_capabilities=desired_cap)
+
+driver.get("https://example.com")
+
+# your further automation steps here
+
+driver.quit()
