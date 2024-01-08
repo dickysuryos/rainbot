@@ -46,12 +46,6 @@ if __name__ == '__main__':
                 if args.detatched == True:
                     options.add_argument('-headless') 
                 options.set_preference("browser.privatebrowsing.autostart", True)
-                # options.set_preference("network.proxy.type", 1)
-                # options.set_preference("network.proxy.http", "203.190.243.181")
-                # options.set_preference("network.proxy.http_port", 3128)
-                # options.set_preference("network.proxy.socks", "127.0.0.1")
-                # options.set_preference("network.proxy.socks_port", 9050)
-                # options.set_preference("network.proxy.type", 1)
 
                 driver = webdriver.Firefox(options=options)
                 driver.get(args.url) 
